@@ -1,6 +1,6 @@
 # guanjia
 
-> A Vue.js project
+> 企业文件管理系统
 
 ## Build Setup
 
