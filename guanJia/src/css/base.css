@@ -1,0 +1,23 @@
+html,body{
+    height: 100%;
+        width: 100%;
+        overflow: hidden;
+}
+*{
+
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.m-t-15{
+    margin-top:15px;
+}
+.el-col{
+    border-radius: 0 !important;
+}
+.el-input__inner{
+    border-radius: 0 !important;
+}
+.el-button{
+    border-radius: 3px !important;
+}
