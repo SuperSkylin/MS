@@ -1,7 +1,7 @@
 <template>
-<div >
-  <nav class='qiyenav '>
-        <el-row  class='row-bg' type="flex" justify="center" align="middle">
+<div class="bg-white" id="qiyelist" >
+  <nav class='qiyenav'>
+        <el-row  class='row-bg p_l_20 p_r_20' type="flex" justify="center" align="middle" >
         <el-col :span="3" class='qiyetitle'>企业列表</el-col>
         <el-col :span="6" class="col-input"><el-input placeholder="请输入内容"></el-input></el-col>
         <el-col :span="6"> <el-button type="primary" >搜索</el-button></el-col>
@@ -27,7 +27,8 @@
     <el-table-column
       label="企业名称"
       width="120"
-      align="center">
+      align="center"
+      >
       <template scope="scope">{{ scope.row.date }}</template>
     </el-table-column>
     <el-table-column
@@ -74,8 +75,8 @@
     </el-table-column>
   </el-table>
 </template>
-<template>
-    <div class="right">
+<template >
+    <div class="text-right">
     <el-pagination
       :page-size="5"
       layout="total, prev, pager, next"
@@ -86,6 +87,9 @@
 </div>
 </template>
 <style lang="css" scoped>
+#qiyelist{
+  padding:20px;
+}
 .qiyenav{
   text-align: left;
 }

@@ -131,7 +131,7 @@ export default {
   },
   methods:{
     login(){
-      this.$router.push({path:'/home/qiyelist'});
+      this.$router.push({path:'/home/manage'});
     }
   }
 }

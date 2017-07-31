@@ -21,7 +21,7 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    min-width: 1000px;
+    /* min-width: 1000px; */
   font-family:'Microsoft yahei', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
