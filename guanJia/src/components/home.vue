@@ -1,32 +1,5 @@
 <template>
   <div id='home'>
-<!-- <header>
-  <el-row>
-  <el-col :span="3">
-      <div class="grid-content h50">
-          <img class='logo' src='../assets/login_logo.png'>
-      </div>
-    </el-col>
-  <el-col :span="14">
-      <div class="mainTitle grid-content  h50">
-          <span class='left btn' @click="manage()">管理控制台</span>
-           <span class='right'> &nbsp;搜索</span>
-          <i class="icon icon-sousuo-copy-copy-copy-copy right"></i>
-      </div>
-     </el-col>
-  <el-col :span="2">
-      <div class="grid-content  h50">
-          <i class="icon icon-lingdang"></i>&nbsp;<el-tag class='gj_tag'>18</el-tag>
-      </div>
-   </el-col>
-  <el-col :span="3"><div class="grid-content  h50"></div></el-col>
-  <el-col :span="2">
-      <div class="grid-content  h50">
-          <span>简体中文</span>
-      </div>
-      </el-col>
-  </el-row>
-</header> -->
      <header-tag></header-tag>
 <div class="el-col-24" style="height:100%;margin-bottom:0px">
   <div style="height:100%;width:180px;overflow:hidden;float:left" >
@@ -128,11 +101,6 @@ import header from '@/components/header'
       },
       handleClose(key, keyPath) {
         console.log(key, keyPath);
-      },
-      manage(){
-        this.bgStyle.bg_gray=true;
-        this.bgStyle.bg_white=false;
-        this.$router.push('/home/manage');
       }
     }
   }

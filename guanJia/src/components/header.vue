@@ -3,12 +3,13 @@
     <el-row>
        <el-col :span="3" :xs="3">
       <div class="grid-content">
-          <img class='logo' src='../assets/login_logo.png'>
+          <!-- <img class='logo' src='../assets/login.png'> -->
+          <span class='logo'></span>
       </div>
     </el-col>
   <el-col  :span="14" :xs="7">
       <div class="mainTitle grid-content">
-          <span class='left btn search' @click="manage()">管理控制台</span>
+          <span class='left btn search' @click="manage">管理控制台</span>
            <span  class='right search'> &nbsp;搜索</span>
            <i class="icon icon-sousuo-copy-copy-copy-copy right search"></i>
       </div>
@@ -39,7 +40,14 @@ header{
   }
   .logo{
     height: 100%;
-    width: 90%;
+    width: 180px;
+    display: inline-block;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background:url('../assets/logo.png');
+    position: absolute;
+    left:0;
+    top:0;
 }
       .gj_tag{
       background: #ff9a01;
@@ -89,4 +97,21 @@ header{
 }
 }
 </style>
+<script>
+export default {
+  data(){
+     return {
+         data:{}
+            }
+  },
+  methods:{
+      manage:function(){
+        this.$router.push('/home/manage');
+  
+        
+      }
+  }
+
+}
+</script>
 

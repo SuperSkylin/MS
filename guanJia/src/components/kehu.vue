@@ -47,7 +47,7 @@
   </div>
  
 </template>
-<style>
+ <style scoped>
 .banner{
     background: url('../assets/cxbanner.jpg');
     background-size:cover;

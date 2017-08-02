@@ -26,27 +26,28 @@
     </el-table-column>
     <el-table-column
       label="企业名称"
-      width="120"
       align="center"
+      width="250"
       >
-      <template scope="scope">{{ scope.row.date }}</template>
+      <template scope="scope">{{ scope.row.company }}</template>
     </el-table-column>
     <el-table-column
       prop="name"
       label="联系人"
-      width="120"
        align="center">
     </el-table-column>
-    <el-table-column
-      prop="address"
-      label="联系方式"
+     <el-table-column
+       prop="mobile"
+       label="联系方式"
        align="center"
-      show-overflow-tooltip>
+       show-overflow-tooltip>
     </el-table-column>
-     
+  
     <el-table-column
       label="状态"
        align="center"
+       fit='true'
+       width="100"
       show-overflow-tooltip>
       <template scope="scope">
         <i class="icon icon-state-blue"></i>
@@ -57,11 +58,13 @@
       prop="process"
       label="资料完成度"
        align="center"
+       width="150"
       show-overflow-tooltip>
     </el-table-column>
       <el-table-column
       label="操作"
        align="center"
+    
       show-overflow-tooltip>
          <template scope="scope">
         <el-button
@@ -124,34 +127,17 @@ export default {
     data() {
       return {
         tableData3: [{
-          date: '2016-05-03',
-          name: '王小虎',
+          company: '江苏禾易企业管理有限公司',
+          name: '经理',
           state:' 1',
-          process: '上海市普陀区金沙江路 1518 弄'
+          mobile:'13912345678',
+          process: '70%'
         }, {
-          date: '2016-05-02',
-          name: '王小虎',
-          process: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          process: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          process: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-08',
-          name: '王小虎',
-          process: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-06',
-          name: '王小虎',
-          process: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-07',
-          name: '王小虎',
-          process: '上海市普陀区金沙江路 1518 弄'
+          company: '江苏禾易企业管理有限公司',
+          name: '经理',
+          state:' 1',
+          mobile:'13912345678',
+          process: '70%'
         }],
         multipleSelection: []
       }
@@ -173,6 +159,9 @@ export default {
       add(){//跳转新建企业
         this.$router.push({path:'/home/creatlist'});
       }
+    },
+    created(){
+      console.log(this.tableData3);
     }
   }
 </script>

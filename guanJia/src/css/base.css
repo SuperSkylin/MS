@@ -104,43 +104,7 @@ padding-top:20px;
     .w50{
         width: 50%;
     }
-/* .el-progress{
-    flex:1;
-}
-.el-progress-bar__outer{
-    border-radius: 0 !important ;
-     background: #ffffff !important; 
-    transition: all 0.5s ease 0.1s;      
-}
-.el-progress-bar__inner{
-    border-radius: 0 !important;
-}
- .el-progress-bar__outer:hover{
-    padding:5px 0 !important; 
-    box-sizing: content-box  !important;
-    left: -5px; 
-    z-index: 1000;
-    width: 105%;
-    font-size:18px;
-    font-weight: bold;
-    transition: all 0.5s ease 0.1s;      
-} 
-.el-progress-bar__inner{
-    background: #00CDFF !important;
-        
-}
-.el-progress-bar__innerText{
-   color:#333333 !important;
-   font-size: 16px;
-   font-weight: bold;
-   line-height: 44px;
-}
-.el-progress.is-exception .el-progress-bar__inner{
-    background: #318fff !important;
-}
-.el-progress.is-success .el-progress-bar__inner{
-  background: #167af4 !important;
-} */
+
 .el-form-item{
     height: 40px;
 }
@@ -164,3 +128,37 @@ line-height: 40px;
 
      color: #ffffff;
   }
+.progress  .el-progress-bar__outer{
+    border-radius: 0 !important ;
+     background: #ffffff !important; 
+    transition: all 0.5s ease 0.1s;      
+}
+ .progress  .el-progress-bar__inner{
+    border-radius: 0 !important;
+}
+  .progress  .el-progress-bar__outer:hover{
+    padding:5px 0 !important; 
+    box-sizing: content-box  !important;
+    left: -5px; 
+    z-index: 1000;
+    width: 105%;
+    font-size:18px;
+    font-weight: bold;
+    transition: all 0.5s ease 0.1s;      
+} 
+ .progress .el-progress-bar__inner{
+    background: #00CDFF !important;
+        
+}
+ .progress .el-progress-bar__innerText{
+   color:#333333 !important;
+   font-size: 16px;
+   font-weight: bold;
+   line-height: 44px;
+}
+ .progress.is-exception .el-progress-bar__inner{
+    background: #318fff !important;
+}
+ .progress.is-success .el-progress-bar__inner{
+  background: #167af4 !important;
+} 
