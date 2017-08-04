@@ -9,6 +9,7 @@
         <el-col :span="4" align="center"><el-button @click="add()" style="width:100%" type="primary">登记企业</el-button></el-col>
       </el-row>
   </nav>
+  <!---table内容  s-->
   <template>
   <el-table
     ref="multipleTable"
@@ -17,6 +18,8 @@
     tooltip-effect="dark"
     style="width: 100%"
     class="el-row"
+     @selection-change="handleSelectionChange" 
+   
     >
     <el-table-column
       type="selection"
@@ -29,7 +32,7 @@
       align="center"
       width="250"
       >
-      <template scope="scope">{{ scope.row.company }}</template>
+      <template scope="scope"><span v-on:click="jump(scope.$index,scope.row)"  class="qiyeName">{{ scope.row.company }}</span></template>
     </el-table-column>
     <el-table-column
       prop="name"
@@ -69,6 +72,8 @@
          <template scope="scope">
         <el-button
           size="small"
+          type="danger"
+          @click="handleDelete(scope.$index, scope.row)"
         >删除</el-button>
         <el-button
           size="small"
@@ -78,6 +83,8 @@
     </el-table-column>
   </el-table>
 </template>
+<!---table内容  e-->
+<!-- 分页 s-->
 <template >
     <div class="text-right">
     <el-pagination
@@ -87,6 +94,7 @@
     </el-pagination>
   </div>
 </template>
+<!-- 分页 e-->
 </div>
 </template>
 <style lang="css" scoped>
@@ -121,18 +129,25 @@ border-left:2px solid #009acb;
   background-position: center ;
   vertical-align: middle;
 }
+.qiyeName:hover{
+  color:red;
+  text-decoration: underline;
+  cursor: pointer;
+}
 </style>
 <script>
 export default {
     data() {
       return {
         tableData3: [{
+          id:'1',
           company: '江苏禾易企业管理有限公司',
           name: '经理',
           state:' 1',
           mobile:'13912345678',
           process: '70%'
         }, {
+          id:'2',
           company: '江苏禾易企业管理有限公司',
           name: '经理',
           state:' 1',
@@ -155,9 +170,16 @@ export default {
       },
       handleSelectionChange(val) {
         this.multipleSelection = val;
+        console.log(this.multipleSelection);
+      },
+      handleDelete(index, row) {
+        console.log(index, row);
       },
       add(){//跳转新建企业
         this.$router.push({path:'/home/creatlist'});
+      },
+      jump(index,row){
+       this.$router.push({path:'/home/creatlist/#'+row.id});
       }
     },
     created(){

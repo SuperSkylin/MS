@@ -6,11 +6,11 @@
      <nav style="height:100%" >
         <el-row  class="tac " style="height:100%;margin-bottom:0px" >
          <el-col style="height:100%"  >
-         <el-menu style="height:100%" default-active="activeIndex" :router=true class="el-menu-vertical-demo nav-default" @open="handleOpen" @close="handleClose">
+         <el-menu style="height:100%" default-active="activeIndex" :router='true' class="el-menu-vertical-demo nav-default" @open="handleOpen" @close="handleClose">
         <el-submenu index="1" >
           <template slot="title"><i class="icon icon-sanjiaoxing02-copy"></i>高企申报管理平台</template>
         <el-menu-item-group>
-            <el-menu-item index="qiyelist"><i class="icon icon-qiyelist"></i> 企业列表</el-menu-item>
+            <el-menu-item index="qiyelist" :route="{path:'/home/qiyelist'}"><i class="icon icon-qiyelist"></i> 企业列表</el-menu-item>
             <el-menu-item index="1-2"><i class="icon icon-yijiandanglist"></i> 已建档企业列表</el-menu-item>
             <el-menu-item index="1-3"><i class="icon icon-yikaishi"></i> 已开始企业列表</el-menu-item>
             <el-menu-item index="1-4"><i class="icon icon-yiwancheng"></i> 已完成列表</el-menu-item>
