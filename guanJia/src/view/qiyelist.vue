@@ -11,6 +11,7 @@
   </nav>
   <!---table内容  s-->
   <template>
+  
   <el-table
     ref="multipleTable"
     :data="tableData3"
@@ -18,9 +19,15 @@
     tooltip-effect="dark"
     style="width: 100%"
     class="el-row"
+<<<<<<< HEAD
      @selection-change="handleSelectionChange" 
    
+=======
+    @cell-click="cellClick"
+     @selection-change="handleSelectionChange" 
+>>>>>>> syy
     >
+
     <el-table-column
       type="selection"
       width="55"
@@ -30,19 +37,22 @@
     <el-table-column
       label="企业名称"
       align="center"
-      width="250"
+      width="331"
       >
       <template scope="scope"><span v-on:click="jump(scope.$index,scope.row)"  class="qiyeName">{{ scope.row.company }}</span></template>
     </el-table-column>
     <el-table-column
       prop="name"
       label="联系人"
-       align="center">
+       align="center"
+       width="212"
+       >
     </el-table-column>
      <el-table-column
        prop="mobile"
        label="联系方式"
        align="center"
+       width="123"
        show-overflow-tooltip>
     </el-table-column>
   
@@ -50,7 +60,7 @@
       label="状态"
        align="center"
        fit='true'
-       width="100"
+       width="148"
       show-overflow-tooltip>
       <template scope="scope">
         <i class="icon icon-state-blue"></i>
@@ -61,13 +71,13 @@
       prop="process"
       label="资料完成度"
        align="center"
-       width="150"
+       width="268"
       show-overflow-tooltip>
     </el-table-column>
       <el-table-column
       label="操作"
        align="center"
-    
+    width="307"
       show-overflow-tooltip>
          <template scope="scope">
         <el-button
@@ -82,6 +92,7 @@
       </template>
     </el-table-column>
   </el-table>
+
 </template>
 <!---table内容  e-->
 <!-- 分页 s-->
@@ -136,9 +147,11 @@ border-left:2px solid #009acb;
 }
 </style>
 <script>
+import draggable from 'vuedraggable'
 export default {
     data() {
       return {
+        tags:[],
         tableData3: [{
           id:'1',
           company: '江苏禾易企业管理有限公司',
@@ -157,8 +170,15 @@ export default {
         multipleSelection: []
       }
     },
+    components:{
+      draggable
+    },
 
     methods: {
+      cellClick(val){
+        this.multipleSelection=val;
+        console.log(val);
+      },
       toggleSelection(rows) {
         if (rows) {
           rows.forEach(row => {
@@ -178,6 +198,12 @@ export default {
       add(){//跳转新建企业
         this.$router.push({path:'/home/creatlist'});
       },
+      getdata(evt){
+        console.log(evt.draggedContext);
+      },
+      datadragEnd(evt){
+        console.log('111');
+        },
       jump(index,row){
        this.$router.push({path:'/home/creatlist/#'+row.id});
       }
