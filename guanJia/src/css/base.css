@@ -162,3 +162,6 @@ line-height: 40px;
  .progress.is-success .el-progress-bar__inner{
   background: #167af4 !important;
 } 
+.dargDiv .el-checkbox__label{
+    display: none !important;
+}

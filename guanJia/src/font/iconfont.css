@@ -25,7 +25,7 @@
 
 .icon-yiwancheng:before { content: "\e600"; }
 
-.icon-sanjiaoxing02:before { content: "\e611"; }
+ .icon-sanjiaoxing02:before { content: "\e611"; } 
 
 .icon-sousuo-copy-copy-copy-copy:before { content: "\e654"; }
 
@@ -53,5 +53,11 @@
 
 .icon-BAI-wuzi:before { content: "\e69c"; }
 
-.icon-sanjiaoxing02-copy:before { content: "\e76e"; }
+.el-icon-arrow-down:before {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e76e"; }
 

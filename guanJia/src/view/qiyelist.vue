@@ -200,7 +200,7 @@ export default {
         console.log('111');
         },
       jump(index,row){
-       this.$router.push({path:'/home/creatlist/#'+row.id});
+       this.$router.push({path:'/home/qiyelist/'+row.id});
       }
     },
     created(){
