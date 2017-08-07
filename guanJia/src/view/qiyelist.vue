@@ -19,13 +19,9 @@
     tooltip-effect="dark"
     style="width: 100%"
     class="el-row"
-<<<<<<< HEAD
      @selection-change="handleSelectionChange" 
-   
-=======
     @cell-click="cellClick"
      @selection-change="handleSelectionChange" 
->>>>>>> syy
     >
 
     <el-table-column
