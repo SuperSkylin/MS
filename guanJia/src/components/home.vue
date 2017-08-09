@@ -4,25 +4,30 @@
 <div class="el-col-24" style="height:100%;margin-bottom:0px">
   <div style="height:100%;width:180px;overflow:hidden;float:left" >
      <nav style="height:100%" >
-        <el-row  class="tac " style="height:100%;margin-bottom:0px" >
-         <el-col style="height:100%"  >
-         <el-menu style="height:100%" default-active="activeIndex" :router='true' class="el-menu-vertical-demo nav-default" @open="handleOpen" @close="handleClose">
-        <el-submenu index="1" >
-          <template slot="title"><i class="icon icon-sanjiaoxing02-copy"></i>高企申报管理平台</template>
-        <el-menu-item-group>
+         <el-row  class="tac " style="height:100%;margin-bottom:0px" > 
+          <el-col style="height:100%"  > 
+         <el-menu style="height:100%" default-active="activeIndex" :router='true' class="el-menu-demo nav-default" mode="vertical" @open="handleOpen" @close="handleClose">
+         <el-submenu index="1" >
+           <template slot="title">
+             <!-- <i class="icon icon-sanjiaoxing02-copy"></i> -->
+             高企申报管理平台</template> 
+             <template> </template>
+               
+             
+        <!-- <el-menu-item-group> -->
             <el-menu-item index="qiyelist" :route="{path:'/home/qiyelist'}"><i class="icon icon-qiyelist"></i> 企业列表</el-menu-item>
             <el-menu-item index="1-2"><i class="icon icon-yijiandanglist"></i> 已建档企业列表</el-menu-item>
             <el-menu-item index="1-3"><i class="icon icon-yikaishi"></i> 已开始企业列表</el-menu-item>
             <el-menu-item index="1-4"><i class="icon icon-yiwancheng"></i> 已完成列表</el-menu-item>
-        </el-menu-item-group>
+        <!-- </el-menu-item-group> -->
       </el-submenu>
-      <el-menu-item index="2"><i class="icon icon-sanjiaoxing02-copy"></i>知识产权管理</el-menu-item>
+       <el-menu-item index="2"><i class="icon icon-sanjiaoxing02-copy"></i>知识产权管理</el-menu-item>
       <el-menu-item index="3"><i class="icon icon-sanjiaoxing02-copy"></i>财务审计报告</el-menu-item>
       <el-menu-item index="4"><i class="icon icon-sanjiaoxing02-copy"></i>企业资质管理</el-menu-item>
-      <el-menu-item index="5"><i class="icon icon-sanjiaoxing02-copy"></i>产品资质管理</el-menu-item>
+      <el-menu-item index="5"><i class="icon icon-sanjiaoxing02-copy"></i>产品资质管理</el-menu-item> 
        </el-menu>
-      </el-col>
-      </el-row>
+       </el-col> 
+       </el-row> 
     </nav>
   </div>
   <div style="width:100%;padding-left:180px">
@@ -78,6 +83,9 @@
 main{
   overflow: hidden;
   /* padding:20px; */
+}
+.el-submenu.is-opened>.el-submenu__title .el-submenu__icon-arrow{
+  transform: rotateZ(90deg) !important;
 }
 
 </style>

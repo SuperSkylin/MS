@@ -11,7 +11,6 @@
   </nav>
   <!---table内容  s-->
   <template>
-  
   <el-table
     ref="multipleTable"
     :data="tableData3"
@@ -21,9 +20,7 @@
     class="el-row"
      @selection-change="handleSelectionChange" 
     @cell-click="cellClick"
-     @selection-change="handleSelectionChange" 
     >
-
     <el-table-column
       type="selection"
       width="55"
@@ -88,7 +85,6 @@
       </template>
     </el-table-column>
   </el-table>
-
 </template>
 <!---table内容  e-->
 <!-- 分页 s-->
@@ -201,7 +197,7 @@ export default {
         console.log('111');
         },
       jump(index,row){
-       this.$router.push({path:'/home/creatlist/#'+row.id});
+       this.$router.push({path:'/home/qiyelist/'+row.id});
       }
     },
     created(){

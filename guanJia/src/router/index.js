@@ -7,6 +7,7 @@ import kehu from '@/components/kehu'
 import qiyelist from '@/view/qiyelist'
 import creatlist from '@/view/creatlist'
 import manage from '@/view/manage'
+import company from '@/view/company/companyBranch'
 
 
 Vue.use(Router)
@@ -42,8 +43,14 @@ export default new Router({
           name:'createlist',
           component:creatlist
         }
+            ,{
+           path:'/home/qiyelist/:id',
+            name:'',
+          component:company
+         }
       ]
     }
+
 
   ]
 })
