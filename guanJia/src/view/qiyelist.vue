@@ -11,7 +11,6 @@
   </nav>
   <!---table内容  s-->
   <template>
-  
   <el-table
     ref="multipleTable"
     :data="tableData3"
@@ -20,11 +19,8 @@
     style="width: 100%"
     class="el-row"
      @selection-change="handleSelectionChange" 
-    @cell-click="cellClick"
-     @selection-change="handleSelectionChange" 
-
+     @cell-click="cellClick"
     >
-
     <el-table-column
       type="selection"
       width="55"
@@ -89,7 +85,6 @@
       </template>
     </el-table-column>
   </el-table>
-
 </template>
 <!---table内容  e-->
 <!-- 分页 s-->
